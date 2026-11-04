@@ -635,8 +635,8 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
 @media (max-width:520px){.pcard{padding:18px 10px 26px!important;border-radius:999px 999px 12px 12px / 120px 120px 12px 12px!important}.pcard .who{font-size:1.45rem!important}.pcard .parents{font-size:.92rem}.pcard .role{letter-spacing:.14em;font-size:.66rem}.pfig{width:88%!important}}
 .pair-heart{position:absolute;left:50%;top:clamp(90px,22vw,170px);z-index:2;transform:translate(-50%,0);font-size:clamp(20px,5vw,30px);color:#d23a4a;text-shadow:0 0 12px rgba(255,120,130,.6)}
 .motion .pair-heart{animation:heartFloat 3s ease-in-out infinite}
-.motion .pcard.bride.rv{transform:translateX(-60px) rotate(-3deg)}
-.motion .pcard.groom.rv{transform:translateX(60px) rotate(3deg)}
+.motion .pcard.bride.rv{transform:translateX(-28px) rotate(-3deg)}
+.motion .pcard.groom.rv{transform:translateX(28px) rotate(3deg)}
 .motion .pcard.rv.in{transform:none;transition:opacity .9s ease,transform 1.3s cubic-bezier(.25,1.45,.45,1)}
 .pcard{transition:transform .5s cubic-bezier(.25,1.45,.45,1),box-shadow .5s ease}
 .pcard:hover{transform:translateY(-6px)!important}
@@ -657,6 +657,16 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
 @keyframes spinSlow{to{transform:rotate(360deg)}}
 .deco .dust{position:absolute;width:3px;height:3px;border-radius:50%;background:#d9ad4e;box-shadow:0 0 6px 1px rgba(230,180,80,.7);opacity:.5}
 .motion .deco .dust{animation:twinkle var(--dur,3s) ease-in-out infinite;animation-delay:var(--dl,0s)}
+
+/* ---- mobile fit: nothing may widen the page, in any browser ---- */
+html{overflow-x:hidden}
+.paper-world,#couple,.closing,.invite{overflow-x:hidden}
+@supports (overflow:clip){.paper-world,#couple,.invite{overflow-x:clip}}
+img,svg,canvas,video{max-width:100%}
+.duo img,.pfig img,.painting,.palki img{max-width:none}
+/* the night scene fills the screen even after the address bar hides */
+.stage{height:100vh;height:100lvh;background:#0d1330}
+.scene{background:#0d1330}
 </style>
 </head>
 <body>
